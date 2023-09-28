@@ -11,6 +11,10 @@ export default function handler(_req, res) {
 
   let result = [];
 
+  console.log("joining here");
+
+  return res.sendStatus(200);
+
   // read the file
   fs.createReadStream("./data.csv")
     .pipe(parse({ delimiter: ";", from_line: 2 }))
